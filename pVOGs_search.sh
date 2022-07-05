@@ -26,3 +26,13 @@ mkdir -p ./Roux_analysis/pVOGs
 	/groups/umcg-lld/tmp03/umcg-sgarmaeva/databases/pvogs/AllvogHMMprofiles/all_vogs.hmm \
 	./Roux_analysis/pVOGs/nonredundant_contigs.min1000.AA.fasta \
 	&> ./Roux_analysis/pVOGs/hmmsearch.log
+
+# pVOGs predicted VLP extraction #
+sed -e '1,3d' < ./Roux_analysis/pVOGs/nonredundant_contigs.min1000.AA.tblout | \
+	head -n -10 | \
+	awk -F ' ' '{print $1}' | \
+	sort -u | \
+	sed 's/_[0-9]\+$//' | \
+	uniq -c > ./Roux_analysis/pVOGs/viral_genes_pred_tidy
+awk '$1 > 1' ./Roux_analysis/pVOGs/viral_genes_pred_tidy | \
+	awk -F ' ' '{print $2}' > ./Roux_analysis/tidy/atleasttwo_viral_genes_tidy
