@@ -102,5 +102,6 @@ spades.py \
 
 sed 's/>NODE/>'${SAMPLE_ID}'_NODE/g' ./${SAMPLE_ID}/clean_metaspades_out/${SAMPLE_ID}_scaffolds.min1000.fasta > \
 	./${SAMPLE_ID}/clean_metaspades_out/${SAMPLE_ID}_renamed_scaffolds.fasta
-cp ./${SAMPLE_ID}/clean_metaspades_out/${SAMPLE_ID}_renamed_scaffolds.fasta ./all_scaffolds_Roux
+
+cp ./${SAMPLE_ID}/clean_metaspades_out/${SAMPLE_ID}_renamed_scaffolds.fasta ./Roux_analysis/all_scaffolds_Roux
 
