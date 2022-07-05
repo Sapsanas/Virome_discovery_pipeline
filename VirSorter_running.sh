@@ -26,10 +26,10 @@ wrapper_phage_contigs_sorter_iPlant.pl \
 	--no_c 1
 
 # VirSorter predicted VLP extraction #
-grep -v "#" ./analysis_outputs/VirSorter/VIRSorter_global-phage-signal.csv | \
+grep -v "#" ./Roux_analysis/VirSorter/VIRSorter_global-phage-signal.csv | \
 	cut -f1 -d "," | \
 	sed s/VIRSorter_// | \
 	cut -f 1 -d "-" | \
 	sed s/_/./2 | \
-	sed s/_/./8 > ./analysis_outputs/tidy/VIRSorter_global-phage-signal_tidy
+	sed s/_/./8 > ./Roux_analysis/tidy/VIRSorter_global-phage-signal_tidy
 
