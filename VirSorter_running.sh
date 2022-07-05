@@ -17,7 +17,7 @@ module load Anaconda3
 
 source activate virsorter
 wrapper_phage_contigs_sorter_iPlant.pl \
-	-f ./Roux_analysis/nonredundant_contigs.fasta \
+	-f ./Roux_analysis/nonredundant_scaffolds.fasta \
 	--db 2 \
 	--wdir ./Roux_analysis/VirSorter \
 	--ncpu 4 \
