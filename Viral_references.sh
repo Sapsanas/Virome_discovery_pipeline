@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=Irish_topology
-#SBATCH --output=Irish_topology.out
-#SBATCH --error=Irish_topology.err
-#SBATCH --mem=20gb
-#SBATCH --time=6:00:00
+#SBATCH --job-name=virrefs
+#SBATCH --output=virrefs.out
+#SBATCH --error=virrefs.err
+#SBATCH --mem=8gb
+#SBATCH --time=01:00:00
 #SBATCH --cpus-per-task=4 
 
 
